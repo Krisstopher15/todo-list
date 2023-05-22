@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+}
+
+.content > * {
+  border: 1px solid black;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 0.5fr 2fr;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.doc-name {
+  grid-column: 1/-1;
+}
+
+.project {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
