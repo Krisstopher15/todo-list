@@ -12,12 +12,18 @@
       <aside class="project-menu">
         <form class="add-project">
           <label for="project-name"></label>
-          <input type="text" name="project-name" id="project-name" />
+          <input type="text" name="project-name" id="project-name" required />
           <button type="submit">+</button>
         </form>
         <div class="project-list"></div>
       </aside>
-      <main class="todo-list"></main>
+      <main class="todo-list">
+        <header class="project-info">
+          <p class="project-title"></p>
+          <button>add task</button>
+        </header>
+        <div class="todos"></div>
+      </main>
     </div>
   </body>
 </html>
