@@ -477,7 +477,8 @@ module.exports = styleTagTransform;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   addProject: () => (/* binding */ addProject),
-/* harmony export */   projectList: () => (/* binding */ projectList)
+/* harmony export */   projectList: () => (/* binding */ projectList),
+/* harmony export */   remove: () => (/* binding */ remove)
 /* harmony export */ });
 let projectList = [];
 let projectId = 0;
@@ -486,6 +487,11 @@ class Project {
   constructor(id, name) {
     this.name = name;
     this.id = id;
+    this.todoList = [];
+  }
+
+  addTodo(todo) {
+    this.todoList.push(todo);
   }
 }
 
@@ -497,6 +503,48 @@ function addProject() {
   projectId++;
 
   console.table(projectList);
+}
+
+function remove(event) {
+  const target = event.target.getAttribute("data-id");
+  const nTarget = parseInt(target);
+
+  projectList.splice(nTarget, 1);
+}
+
+
+
+
+/***/ }),
+
+/***/ "./src/addTodo.js":
+/*!************************!*\
+  !*** ./src/addTodo.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   addTodo: () => (/* binding */ addTodo)
+/* harmony export */ });
+/* harmony import */ var _addProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addProject */ "./src/addProject.js");
+
+
+let todoId = 0;
+
+class Todo {
+  constructor(id, title, description) {
+    this.title = title;
+    this.description = description;
+    this.id = id;
+  }
+}
+
+function addTodo(event) {
+  const projectIndex = event.target.getAttribute("data-id");
+  const project = _addProject__WEBPACK_IMPORTED_MODULE_0__.projectList[projectIndex];
+  const todo = new Todo(todoId, "Hello", "World");
+  project.todoList.push(todo);
 }
 
 
@@ -515,21 +563,98 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   renderProjects: () => (/* binding */ renderProjects)
 /* harmony export */ });
 /* harmony import */ var _addProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addProject */ "./src/addProject.js");
+/* harmony import */ var _addTodo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addTodo */ "./src/addTodo.js");
+/* harmony import */ var _renderTodos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderTodos */ "./src/renderTodos.js");
+
+
 
 
 function renderProjects() {
   const projectListContainer = document.querySelector(".project-list");
   projectListContainer.innerHTML = "";
 
-  _addProject__WEBPACK_IMPORTED_MODULE_0__.projectList.forEach((project) => {
+  _addProject__WEBPACK_IMPORTED_MODULE_0__.projectList.forEach((project, index) => {
     const list = document.createElement("div");
     list.classList.add("project");
 
     list.innerHTML = `
-        <p>${project.name}</p>
-        <button class="btn-delProject">X</button>
+        <p data-id="${index}" class="btn-currentProject">${project.name}</p>
+        <button data-id="${index}" class="btn-removeProject">X</button>
     `;
+    const btnRemoveProject = list.querySelector(".btn-removeProject");
+    // btnRemoveProject.addEventListener("click", (e) => {
+    //   remove(e);
+    //   renderProjects();
+    // });
+
+    const btnCurrentProject = list.querySelector(".btn-currentProject");
+    btnCurrentProject.addEventListener("click", (e) => {
+      console.log(project.todoList);
+      (0,_addTodo__WEBPACK_IMPORTED_MODULE_1__.addTodo)(e);
+      currentProject(e, index);
+    });
     projectListContainer.appendChild(list);
+  });
+}
+
+function currentProject(event, index) {
+  const projectIndex = event.target.getAttribute("data-id");
+  const project = _addProject__WEBPACK_IMPORTED_MODULE_0__.projectList[projectIndex];
+
+  (0,_renderTodos__WEBPACK_IMPORTED_MODULE_2__.renderTodos)(project.todoList, index);
+}
+
+
+
+
+/***/ }),
+
+/***/ "./src/renderTodos.js":
+/*!****************************!*\
+  !*** ./src/renderTodos.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   renderTodos: () => (/* binding */ renderTodos)
+/* harmony export */ });
+/* harmony import */ var _addProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addProject */ "./src/addProject.js");
+
+
+// function renderTodos(todoList) {
+//   const todoListContainer = document.querySelector(".todos");
+
+//   todoListContainer.innerHTML = "";
+
+//   projectList.forEach((project) => {
+//     project.todoList.forEach((todo) => {
+//       const todoElement = document.createElement("div");
+
+//       todoElement.innerHTML = `
+//         <p>${todo.title}</p>
+//         <p>${todo.description}</p>
+//       `;
+//       todoListContainer.appendChild(todoElement);
+//     });
+//   });
+// }
+
+function renderTodos(todoList, index) {
+  const todoListContainer = document.querySelector(".todos");
+  const projectTitle = document.querySelector(".project-title");
+  const project = _addProject__WEBPACK_IMPORTED_MODULE_0__.projectList[index].name;
+  projectTitle.textContent = project;
+  todoListContainer.innerHTML = "";
+
+  todoList.forEach((todo) => {
+    const todoElement = document.createElement("div");
+    todoElement.innerHTML = `
+        <p>${todo.title}</p>
+        <p>${todo.description}</p>
+      `;
+
+    todoListContainer.appendChild(todoElement);
   });
 }
 
@@ -628,12 +753,21 @@ __webpack_require__.r(__webpack_exports__);
 (0,_renderProjects__WEBPACK_IMPORTED_MODULE_1__.renderProjects)();
 
 const btnAddProject = document.querySelector(".add-project");
+const currentProject = document.querySelectorAll(".btn-currentProject");
 
 btnAddProject.addEventListener("submit", (e) => {
   e.preventDefault();
   (0,_addProject__WEBPACK_IMPORTED_MODULE_2__.addProject)();
   (0,_renderProjects__WEBPACK_IMPORTED_MODULE_1__.renderProjects)();
 });
+
+// const projectListContainer = document.querySelector(".project-list");
+
+// projectListContainer.addEventListener("click", (e) => {
+//   if (e.target.classList.contains("btn-currentProject")) {
+//     console.log("asdf");
+//   }
+// });
 
 })();
 

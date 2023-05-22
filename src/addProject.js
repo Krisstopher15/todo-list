@@ -5,6 +5,11 @@ class Project {
   constructor(id, name) {
     this.name = name;
     this.id = id;
+    this.todoList = [];
+  }
+
+  addTodo(todo) {
+    this.todoList.push(todo);
   }
 }
 
@@ -18,4 +23,11 @@ function addProject() {
   console.table(projectList);
 }
 
-export { addProject, projectList };
+function remove(event) {
+  const target = event.target.getAttribute("data-id");
+  const nTarget = parseInt(target);
+
+  projectList.splice(nTarget, 1);
+}
+
+export { addProject, projectList, remove };
