@@ -10,10 +10,12 @@ class Todo {
   }
 }
 
-function addTodo(event) {
+function addTodo(index) {
   const todoListContainer = document.querySelector(".todos");
   const form = document.createElement("form");
   form.classList.add("addTaskForm");
+
+  todoListContainer.innerHTML = "";
 
   form.innerHTML = `
     <div class="input-title inputs">
@@ -36,12 +38,29 @@ function addTodo(event) {
             </select>
           </div>
           <button type="submit" class="btn-submit">ADD</button>
+          <button class="btn-close">X</button>
   `;
   todoListContainer.appendChild(form);
-  const projectIndex = event.target.getAttribute("data-id");
-  const project = projectList[projectIndex];
-  const todo = new Todo(todoId, "Hello", "World");
-  project.todoList.push(todo);
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const project = projectList[index];
+    const title = form.querySelector("#title");
+    const description = form.querySelector("#description");
+    const todo = new Todo(todoId, title.value, "World");
+    project.todoList.push(todo);
+    todoListContainer.removeChild(form);
+    console.table(project.todoList);
+  });
+
+  const btnClose = form.querySelector(".btn-close");
+
+  btnClose.addEventListener("click", () => {
+    todoListContainer.removeChild(form);
+  });
+
+  // const projectIndex = event.target.getAttribute("data-id");
+  console.log(index);
 }
 
 export { addTodo };

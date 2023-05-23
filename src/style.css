@@ -11,8 +11,8 @@ body {
   height: 100%;
 }
 
-.content > * {
-  border: 1px solid black;
+:root {
+  --header-color: #e9edc9;
 }
 
 .content {
@@ -25,6 +25,7 @@ body {
 
 .doc-name {
   grid-column: 1/-1;
+  background-color: var(--header-color);
 }
 
 .project {
@@ -48,4 +49,8 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.close-form {
+  display: none;
 }

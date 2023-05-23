@@ -23,10 +23,7 @@ function renderTodos(todoList, index) {
   const todoListContainer = document.querySelector(".todos");
   const projectTitle = document.querySelector(".project-title");
   const projectInfo = document.querySelector(".project-info");
-  const btnAdd = document.createElement("button");
-  btnAdd.textContent = "ADD PROJECT";
-  btnAdd.dataset.id = index;
-  projectInfo.appendChild(btnAdd);
+  const addTask = document.querySelector(".add-task-btn");
   const project = projectList[index].name;
 
   projectTitle.textContent = project;
@@ -41,7 +38,15 @@ function renderTodos(todoList, index) {
 
     todoListContainer.appendChild(todoElement);
   });
-
-  btnAdd.addEventListener("click", addTodo);
+  addTask.addEventListener("click", () => {
+    console.log("adf");
+    openForm(index);
+  });
 }
+
+function openForm(index) {
+  addTodo(index);
+  console.log(index);
+}
+
 export { renderTodos };

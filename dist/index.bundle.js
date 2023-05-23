@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n.content > * {\r\n  border: 1px solid black;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 0.3fr 1fr;\r\n  grid-template-rows: 0.2fr 2fr;\r\n  height: 100%;\r\n  gap: 0.5rem;\r\n}\r\n\r\n.doc-name {\r\n  grid-column: 1/-1;\r\n}\r\n\r\n.project {\r\n  display: flex;\r\n  gap: 1rem;\r\n  align-items: center;\r\n}\r\n\r\n.todo-list {\r\n  position: relative;\r\n}\r\n\r\n.addTaskForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  border: 1px solid black;\r\n  height: 70%;\r\n  width: 35%;\r\n  position: absolute;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,gCAAgC;EAChC,6BAA6B;EAC7B,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,SAAS;EACT,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,6BAA6B;EAC7B,uBAAuB;EACvB,WAAW;EACX,UAAU;EACV,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,gCAAgC;AAClC","sourcesContent":["*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n.content > * {\r\n  border: 1px solid black;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 0.3fr 1fr;\r\n  grid-template-rows: 0.2fr 2fr;\r\n  height: 100%;\r\n  gap: 0.5rem;\r\n}\r\n\r\n.doc-name {\r\n  grid-column: 1/-1;\r\n}\r\n\r\n.project {\r\n  display: flex;\r\n  gap: 1rem;\r\n  align-items: center;\r\n}\r\n\r\n.todo-list {\r\n  position: relative;\r\n}\r\n\r\n.addTaskForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  border: 1px solid black;\r\n  height: 70%;\r\n  width: 35%;\r\n  position: absolute;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%);\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n:root {\r\n  --header-color: #e9edc9;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 0.3fr 1fr;\r\n  grid-template-rows: 0.2fr 2fr;\r\n  height: 100%;\r\n  gap: 0.5rem;\r\n}\r\n\r\n.doc-name {\r\n  grid-column: 1/-1;\r\n  background-color: var(--header-color);\r\n}\r\n\r\n.project {\r\n  display: flex;\r\n  gap: 1rem;\r\n  align-items: center;\r\n}\r\n\r\n.todo-list {\r\n  position: relative;\r\n}\r\n\r\n.addTaskForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  border: 1px solid black;\r\n  height: 70%;\r\n  width: 35%;\r\n  position: absolute;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%);\r\n}\r\n\r\n.close-form {\r\n  display: none;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,gCAAgC;EAChC,6BAA6B;EAC7B,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,iBAAiB;EACjB,qCAAqC;AACvC;;AAEA;EACE,aAAa;EACb,SAAS;EACT,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,6BAA6B;EAC7B,uBAAuB;EACvB,WAAW;EACX,UAAU;EACV,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,gCAAgC;AAClC;;AAEA;EACE,aAAa;AACf","sourcesContent":["*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n:root {\r\n  --header-color: #e9edc9;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 0.3fr 1fr;\r\n  grid-template-rows: 0.2fr 2fr;\r\n  height: 100%;\r\n  gap: 0.5rem;\r\n}\r\n\r\n.doc-name {\r\n  grid-column: 1/-1;\r\n  background-color: var(--header-color);\r\n}\r\n\r\n.project {\r\n  display: flex;\r\n  gap: 1rem;\r\n  align-items: center;\r\n}\r\n\r\n.todo-list {\r\n  position: relative;\r\n}\r\n\r\n.addTaskForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  border: 1px solid black;\r\n  height: 70%;\r\n  width: 35%;\r\n  position: absolute;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%);\r\n}\r\n\r\n.close-form {\r\n  display: none;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -540,10 +540,12 @@ class Todo {
   }
 }
 
-function addTodo(event) {
+function addTodo(index) {
   const todoListContainer = document.querySelector(".todos");
   const form = document.createElement("form");
   form.classList.add("addTaskForm");
+
+  todoListContainer.innerHTML = "";
 
   form.innerHTML = `
     <div class="input-title inputs">
@@ -566,12 +568,29 @@ function addTodo(event) {
             </select>
           </div>
           <button type="submit" class="btn-submit">ADD</button>
+          <button class="btn-close">X</button>
   `;
   todoListContainer.appendChild(form);
-  const projectIndex = event.target.getAttribute("data-id");
-  const project = _addProject__WEBPACK_IMPORTED_MODULE_0__.projectList[projectIndex];
-  const todo = new Todo(todoId, "Hello", "World");
-  project.todoList.push(todo);
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const project = _addProject__WEBPACK_IMPORTED_MODULE_0__.projectList[index];
+    const title = form.querySelector("#title");
+    const description = form.querySelector("#description");
+    const todo = new Todo(todoId, title.value, "World");
+    project.todoList.push(todo);
+    todoListContainer.removeChild(form);
+    console.table(project.todoList);
+  });
+
+  const btnClose = form.querySelector(".btn-close");
+
+  btnClose.addEventListener("click", () => {
+    todoListContainer.removeChild(form);
+  });
+
+  // const projectIndex = event.target.getAttribute("data-id");
+  console.log(index);
 }
 
 
@@ -673,10 +692,7 @@ function renderTodos(todoList, index) {
   const todoListContainer = document.querySelector(".todos");
   const projectTitle = document.querySelector(".project-title");
   const projectInfo = document.querySelector(".project-info");
-  const btnAdd = document.createElement("button");
-  btnAdd.textContent = "ADD PROJECT";
-  btnAdd.dataset.id = index;
-  projectInfo.appendChild(btnAdd);
+  const addTask = document.querySelector(".add-task-btn");
   const project = _addProject__WEBPACK_IMPORTED_MODULE_0__.projectList[index].name;
 
   projectTitle.textContent = project;
@@ -691,9 +707,17 @@ function renderTodos(todoList, index) {
 
     todoListContainer.appendChild(todoElement);
   });
-
-  btnAdd.addEventListener("click", _addTodo__WEBPACK_IMPORTED_MODULE_1__.addTodo);
+  addTask.addEventListener("click", () => {
+    console.log("adf");
+    openForm(index);
+  });
 }
+
+function openForm(index) {
+  (0,_addTodo__WEBPACK_IMPORTED_MODULE_1__.addTodo)(index);
+  console.log(index);
+}
+
 
 
 
