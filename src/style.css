@@ -20,9 +20,12 @@ body {
   --header-bgcolor: #007fff;
   --headerh1-color: #fff;
   --sidebar-bgcolor: #fff;
-  --projectlist-bgcolor: #e9ecef;
+  --projectlist-bgcolor: #f1faee;
+  --todolist-bgcolor: #00b4d8;
   --content-bgcolor: #90e0ef;
   --btnremove-redcolor: #e63946;
+  --light-gray: #dee2e6;
+  --white: #f1faee;
 }
 
 .content {
@@ -30,8 +33,7 @@ body {
   grid-template-columns: 0.4fr 0.9fr;
   grid-template-rows: 0.2fr 2fr;
   height: 100%;
-  gap: 1rem;
-  background-color: var(--content-bgcolor);
+  background-color: var(--projectlist-bgcolor);
 }
 
 .main-header {
@@ -50,7 +52,7 @@ body {
 .project-menu {
   display: flex;
   flex-direction: column;
-  background-color: var(--sidebar-bgcolor);
+  background-color: var(--projectlist-bgcolor);
   align-items: center;
   gap: 2rem;
   border-radius: 1rem;
@@ -82,11 +84,18 @@ body {
 
 .add-project > input {
   border: none;
+  outline: none;
   padding: 0.5rem;
   border-radius: 1rem;
   width: 80%;
+  background-color: #4cc9f0;
+  color: #fff;
+  font-size: 1.3rem;
 }
 
+.add-project > input::placeholder {
+  color: #fff;
+}
 .add-project > button {
   border: none;
   border: 1px solid #4cc9f0;
@@ -96,6 +105,11 @@ body {
   color: #4cc9f0;
   background-color: #fff;
   font-size: 1.3rem;
+}
+
+.add-project > button:active {
+  background-color: #4cc9f0;
+  color: #fff;
 }
 
 .projects {
@@ -134,29 +148,137 @@ body {
   color: var(--btnremove-redcolor);
   padding: 0.3rem;
   border-radius: 0.5rem;
+  transition: background-color 100ms ease-out, color 100ms ease-out;
 }
 
-.project-menu,
-.todo-list {
+.btn-removeProject:hover {
+  background-color: var(--btnremove-redcolor);
+  color: #fff;
 }
 
 .todo-list {
   position: relative;
-  background-color: #fff;
-  border-radius: 1rem;
+  background-color: var(--todolist-bgcolor);
+}
+
+.project-info {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--btnremove-redcolor);
+}
+
+.project-info .span-project {
+  font-size: 2rem;
+}
+
+.project-info .project-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.add-task-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  border: none;
+  background-color: var(--todolist-bgcolor);
+  outline: none;
+  font-size: 3.5rem;
 }
 
 .addTaskForm {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 1px solid black;
-  height: 70%;
-  width: 35%;
+  height: 95%;
+  width: 40%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: #f1faee;
+}
+
+.addTaskForm div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25%;
+}
+
+.inputs > label {
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+
+.inputs {
+  gap: 1rem;
+}
+
+.new-task {
+  font-size: 1.5rem;
+  color: var(--header-bgcolor);
+}
+
+#title,
+#date,
+#priority,
+#description {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: var(--light-gray);
+}
+
+#description {
+  height: 100px;
+  resize: none;
+}
+
+.btn-submit {
+  border: 1px solid var(--header-bgcolor);
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--header-bgcolor);
+  transition: background-color 100ms ease-out, color 100ms ease-out;
+}
+
+.btn-submit:hover {
+  background-color: var(--header-bgcolor);
+  color: #fff;
+}
+
+.btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--btnremove-redcolor);
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(45deg);
+}
+
+.addTaskForm .btn-close {
+  position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+
+.btn-removeProject {
+  z-index: 2;
 }
 
 .close-form {
