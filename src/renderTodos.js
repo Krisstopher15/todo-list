@@ -9,17 +9,24 @@ function renderTodos(todoList, index) {
   const project = projectList[index].name;
 
   projectTitle.innerHTML = `
-    <span class="span-project"></span>
     <span class="project-name">${project}</span>
   `;
   todoListContainer.innerHTML = "";
 
   todoList.forEach((todo) => {
     const todoElement = document.createElement("div");
-    todoElement.classList.add("todoElement");
+    todoElement.classList.add("todo-element");
     todoElement.innerHTML = `
-        <p>${todo.title}</p>
-        <p>${todo.description}</p>
+        <div class="title-desc">
+          <div class="priority"></div>
+          <p class="title">${todo.title}</p>
+          <p class="desc">${todo.description}</p>
+        </div>
+        <div class="date-and-btns">
+          <p>${todo.dueDate}</p>
+          <button class="btn-edit">Edit</button>
+          <button class="btn-remove-task">Remove</button>
+        </div>
       `;
 
     todoListContainer.appendChild(todoElement);

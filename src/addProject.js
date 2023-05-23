@@ -1,4 +1,5 @@
 import { emptyList } from "./emptyList";
+import { renderProjects } from "./renderProjects";
 
 let projectList = [];
 let projectId = 0;
@@ -22,6 +23,7 @@ function addProject() {
   projectList.push(project);
   projectId++;
   console.table(projectList);
+  renderProjects();
 }
 
 function remove(event) {

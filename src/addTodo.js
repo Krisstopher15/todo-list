@@ -61,16 +61,23 @@ function addTodo(index) {
     const description = form.querySelector("#description");
     const dueDate = form.querySelector("#date");
     const priority = form.querySelector("#priority");
+    // const todo = new Todo(
+    //   todoId,
+    //   "Hello World",
+    //   "20/05/2023",
+    //   "Medium",
+    //   "asfdlasdflsadfjsadf"
+    // );
     const todo = new Todo(
       todoId,
-      "Hello World",
-      "20/05/2023",
-      "Medium",
-      "asfdlasdflsadfjsadf"
+      title.value,
+      dueDate.value,
+      priority.value,
+      description.value
     );
     project.todoList.push(todo);
     todoListContainer.removeChild(form);
-    renderTodos;
+    renderTodos(project.todoList, index);
     console.table(project.todoList);
     todoId++;
   });
