@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n:root {\r\n  --header-color: #e9edc9;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 0.3fr 1fr;\r\n  grid-template-rows: 0.2fr 2fr;\r\n  height: 100%;\r\n  gap: 0.5rem;\r\n}\r\n\r\n.doc-name {\r\n  grid-column: 1/-1;\r\n  background-color: var(--header-color);\r\n}\r\n\r\n.project {\r\n  display: flex;\r\n  gap: 1rem;\r\n  align-items: center;\r\n}\r\n\r\n.todo-list {\r\n  position: relative;\r\n}\r\n\r\n.addTaskForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  border: 1px solid black;\r\n  height: 70%;\r\n  width: 35%;\r\n  position: absolute;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%);\r\n}\r\n\r\n.close-form {\r\n  display: none;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,gCAAgC;EAChC,6BAA6B;EAC7B,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,iBAAiB;EACjB,qCAAqC;AACvC;;AAEA;EACE,aAAa;EACb,SAAS;EACT,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,6BAA6B;EAC7B,uBAAuB;EACvB,WAAW;EACX,UAAU;EACV,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,gCAAgC;AAClC;;AAEA;EACE,aAAa;AACf","sourcesContent":["*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n:root {\r\n  --header-color: #e9edc9;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 0.3fr 1fr;\r\n  grid-template-rows: 0.2fr 2fr;\r\n  height: 100%;\r\n  gap: 0.5rem;\r\n}\r\n\r\n.doc-name {\r\n  grid-column: 1/-1;\r\n  background-color: var(--header-color);\r\n}\r\n\r\n.project {\r\n  display: flex;\r\n  gap: 1rem;\r\n  align-items: center;\r\n}\r\n\r\n.todo-list {\r\n  position: relative;\r\n}\r\n\r\n.addTaskForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  border: 1px solid black;\r\n  height: 70%;\r\n  width: 35%;\r\n  position: absolute;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%);\r\n}\r\n\r\n.close-form {\r\n  display: none;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n    Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\r\n}\r\n\r\n:root {\r\n  --header-bgcolor: #007fff;\r\n  --headerh1-color: #fff;\r\n  --sidebar-bgcolor: #fff;\r\n  --projectlist-bgcolor: #e9ecef;\r\n  --content-bgcolor: #90e0ef;\r\n  --btnremove-redcolor: #e63946;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 0.4fr 0.9fr;\r\n  grid-template-rows: 0.2fr 2fr;\r\n  height: 100%;\r\n  gap: 1rem;\r\n  background-color: var(--content-bgcolor);\r\n}\r\n\r\n.main-header {\r\n  grid-column: 1/-1;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  background-color: var(--header-bgcolor);\r\n}\r\n\r\n.main-header > h1 {\r\n  color: var(--headerh1-color);\r\n  font-weight: 400;\r\n}\r\n\r\n.project-menu {\r\n  display: flex;\r\n  flex-direction: column;\r\n  background-color: var(--sidebar-bgcolor);\r\n  align-items: center;\r\n  gap: 2rem;\r\n  border-radius: 1rem;\r\n  padding: 1rem;\r\n  margin-left: 1rem;\r\n}\r\n\r\n.aside-title {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 100px;\r\n  width: 100%;\r\n}\r\n\r\n.aside-title > p {\r\n  font-size: 2rem;\r\n  font-weight: 500;\r\n}\r\n\r\n.add-project {\r\n  display: flex;\r\n  flex-direction: column;\r\n  height: 20%;\r\n  width: 100%;\r\n  justify-content: space-around;\r\n  align-items: center;\r\n}\r\n\r\n.add-project > input {\r\n  border: none;\r\n  padding: 0.5rem;\r\n  border-radius: 1rem;\r\n  width: 80%;\r\n}\r\n\r\n.add-project > button {\r\n  border: none;\r\n  border: 1px solid #4cc9f0;\r\n  padding: 0.5rem;\r\n  width: 65%;\r\n  border-radius: 0.5rem;\r\n  color: #4cc9f0;\r\n  background-color: #fff;\r\n  font-size: 1.3rem;\r\n}\r\n\r\n.projects {\r\n  font-size: 1.5rem;\r\n}\r\n\r\n.project-list {\r\n  height: 250px;\r\n  width: 100%;\r\n  overflow: auto;\r\n  border: 1px solid #4cc9f0;\r\n  border-radius: 1rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  gap: 1rem;\r\n  padding: 1rem;\r\n}\r\n\r\n.project {\r\n  display: flex;\r\n  width: 100%;\r\n  background-color: #fff;\r\n  justify-content: space-between;\r\n  padding: 1rem;\r\n  border: 1px solid #ffbe0b;\r\n  border-radius: 1rem;\r\n}\r\n\r\n.project > p {\r\n  font-size: 1.4rem;\r\n}\r\n\r\n.btn-removeProject {\r\n  border: 1px solid var(--btnremove-redcolor);\r\n  color: var(--btnremove-redcolor);\r\n  padding: 0.3rem;\r\n  border-radius: 0.5rem;\r\n}\r\n\r\n.project-menu,\r\n.todo-list {\r\n}\r\n\r\n.todo-list {\r\n  position: relative;\r\n  background-color: #fff;\r\n  border-radius: 1rem;\r\n}\r\n\r\n.addTaskForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  border: 1px solid black;\r\n  height: 70%;\r\n  width: 35%;\r\n  position: absolute;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%);\r\n}\r\n\r\n.close-form {\r\n  display: none;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;;;EAGE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE;wEACsE;AACxE;;AAEA;EACE,yBAAyB;EACzB,sBAAsB;EACtB,uBAAuB;EACvB,8BAA8B;EAC9B,0BAA0B;EAC1B,6BAA6B;AAC/B;;AAEA;EACE,aAAa;EACb,kCAAkC;EAClC,6BAA6B;EAC7B,YAAY;EACZ,SAAS;EACT,wCAAwC;AAC1C;;AAEA;EACE,iBAAiB;EACjB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,uCAAuC;AACzC;;AAEA;EACE,4BAA4B;EAC5B,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,wCAAwC;EACxC,mBAAmB;EACnB,SAAS;EACT,mBAAmB;EACnB,aAAa;EACb,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,aAAa;EACb,WAAW;AACb;;AAEA;EACE,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,WAAW;EACX,6BAA6B;EAC7B,mBAAmB;AACrB;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,mBAAmB;EACnB,UAAU;AACZ;;AAEA;EACE,YAAY;EACZ,yBAAyB;EACzB,eAAe;EACf,UAAU;EACV,qBAAqB;EACrB,cAAc;EACd,sBAAsB;EACtB,iBAAiB;AACnB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,WAAW;EACX,cAAc;EACd,yBAAyB;EACzB,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,SAAS;EACT,aAAa;AACf;;AAEA;EACE,aAAa;EACb,WAAW;EACX,sBAAsB;EACtB,8BAA8B;EAC9B,aAAa;EACb,yBAAyB;EACzB,mBAAmB;AACrB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,2CAA2C;EAC3C,gCAAgC;EAChC,eAAe;EACf,qBAAqB;AACvB;;AAEA;;AAEA;;AAEA;EACE,kBAAkB;EAClB,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,6BAA6B;EAC7B,uBAAuB;EACvB,WAAW;EACX,UAAU;EACV,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,gCAAgC;AAClC;;AAEA;EACE,aAAa;AACf","sourcesContent":["*,\r\n*::before,\r\n*::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n    Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\r\n}\r\n\r\n:root {\r\n  --header-bgcolor: #007fff;\r\n  --headerh1-color: #fff;\r\n  --sidebar-bgcolor: #fff;\r\n  --projectlist-bgcolor: #e9ecef;\r\n  --content-bgcolor: #90e0ef;\r\n  --btnremove-redcolor: #e63946;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 0.4fr 0.9fr;\r\n  grid-template-rows: 0.2fr 2fr;\r\n  height: 100%;\r\n  gap: 1rem;\r\n  background-color: var(--content-bgcolor);\r\n}\r\n\r\n.main-header {\r\n  grid-column: 1/-1;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  background-color: var(--header-bgcolor);\r\n}\r\n\r\n.main-header > h1 {\r\n  color: var(--headerh1-color);\r\n  font-weight: 400;\r\n}\r\n\r\n.project-menu {\r\n  display: flex;\r\n  flex-direction: column;\r\n  background-color: var(--sidebar-bgcolor);\r\n  align-items: center;\r\n  gap: 2rem;\r\n  border-radius: 1rem;\r\n  padding: 1rem;\r\n  margin-left: 1rem;\r\n}\r\n\r\n.aside-title {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 100px;\r\n  width: 100%;\r\n}\r\n\r\n.aside-title > p {\r\n  font-size: 2rem;\r\n  font-weight: 500;\r\n}\r\n\r\n.add-project {\r\n  display: flex;\r\n  flex-direction: column;\r\n  height: 20%;\r\n  width: 100%;\r\n  justify-content: space-around;\r\n  align-items: center;\r\n}\r\n\r\n.add-project > input {\r\n  border: none;\r\n  padding: 0.5rem;\r\n  border-radius: 1rem;\r\n  width: 80%;\r\n}\r\n\r\n.add-project > button {\r\n  border: none;\r\n  border: 1px solid #4cc9f0;\r\n  padding: 0.5rem;\r\n  width: 65%;\r\n  border-radius: 0.5rem;\r\n  color: #4cc9f0;\r\n  background-color: #fff;\r\n  font-size: 1.3rem;\r\n}\r\n\r\n.projects {\r\n  font-size: 1.5rem;\r\n}\r\n\r\n.project-list {\r\n  height: 250px;\r\n  width: 100%;\r\n  overflow: auto;\r\n  border: 1px solid #4cc9f0;\r\n  border-radius: 1rem;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  gap: 1rem;\r\n  padding: 1rem;\r\n}\r\n\r\n.project {\r\n  display: flex;\r\n  width: 100%;\r\n  background-color: #fff;\r\n  justify-content: space-between;\r\n  padding: 1rem;\r\n  border: 1px solid #ffbe0b;\r\n  border-radius: 1rem;\r\n}\r\n\r\n.project > p {\r\n  font-size: 1.4rem;\r\n}\r\n\r\n.btn-removeProject {\r\n  border: 1px solid var(--btnremove-redcolor);\r\n  color: var(--btnremove-redcolor);\r\n  padding: 0.3rem;\r\n  border-radius: 0.5rem;\r\n}\r\n\r\n.project-menu,\r\n.todo-list {\r\n}\r\n\r\n.todo-list {\r\n  position: relative;\r\n  background-color: #fff;\r\n  border-radius: 1rem;\r\n}\r\n\r\n.addTaskForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-around;\r\n  border: 1px solid black;\r\n  height: 70%;\r\n  width: 35%;\r\n  position: absolute;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%);\r\n}\r\n\r\n.close-form {\r\n  display: none;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -480,6 +480,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   projectList: () => (/* binding */ projectList),
 /* harmony export */   remove: () => (/* binding */ remove)
 /* harmony export */ });
+/* harmony import */ var _emptyList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./emptyList */ "./src/emptyList.js");
+
+
 let projectList = [];
 let projectId = 0;
 
@@ -501,7 +504,6 @@ function addProject() {
   const project = new Project(projectId, projectName);
   projectList.push(project);
   projectId++;
-
   console.table(projectList);
 }
 
@@ -598,6 +600,35 @@ function addTodo(index) {
 
 /***/ }),
 
+/***/ "./src/emptyList.js":
+/*!**************************!*\
+  !*** ./src/emptyList.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   emptyList: () => (/* binding */ emptyList)
+/* harmony export */ });
+function emptyList() {
+  const todoList = document.querySelector(".todo-list");
+  const todos = document.querySelector(".todos");
+
+  if (!todos.hasChildNodes(".todo-element")) {
+    todos.innerHTML = `
+        <div class="empty-list">
+            <p>EMPTY LIST</p>
+        </div>
+    `;
+    console.log("Empty List");
+  }
+}
+
+
+
+
+/***/ }),
+
 /***/ "./src/renderProjects.js":
 /*!*******************************!*\
   !*** ./src/renderProjects.js ***!
@@ -625,7 +656,7 @@ function renderProjects() {
 
     list.innerHTML = `
         <p data-id="${index}" class="btn-currentProject">${project.name}</p>
-        <button data-id="${index}" class="btn-removeProject">X</button>
+        <button data-id="${index}" class="btn-removeProject">Remove</button>
     `;
     const btnRemoveProject = list.querySelector(".btn-removeProject");
     // btnRemoveProject.addEventListener("click", (e) => {
@@ -700,6 +731,7 @@ function renderTodos(todoList, index) {
 
   todoList.forEach((todo) => {
     const todoElement = document.createElement("div");
+    todoElement.classList.add("todoElement");
     todoElement.innerHTML = `
         <p>${todo.title}</p>
         <p>${todo.description}</p>
@@ -806,10 +838,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _renderProjects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./renderProjects */ "./src/renderProjects.js");
 /* harmony import */ var _addProject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./addProject */ "./src/addProject.js");
+/* harmony import */ var _emptyList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./emptyList */ "./src/emptyList.js");
 
 
 
 
+
+(0,_emptyList__WEBPACK_IMPORTED_MODULE_3__.emptyList)();
 (0,_renderProjects__WEBPACK_IMPORTED_MODULE_1__.renderProjects)();
 
 const btnAddProject = document.querySelector(".add-project");

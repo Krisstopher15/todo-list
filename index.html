@@ -8,13 +8,25 @@
   <script defer src="index.bundle.js"></script></head>
   <body>
     <div class="content">
-      <header class="doc-name">TODO List</header>
+      <header class="main-header">
+        <h1>TODO List</h1>
+      </header>
       <aside class="project-menu">
+        <div class="aside-title">
+          <p>My Todo List</p>
+        </div>
         <form class="add-project">
           <label for="project-name"></label>
-          <input type="text" name="project-name" id="project-name" required />
-          <button type="submit">+</button>
+          <input
+            type="text"
+            name="project-name"
+            id="project-name"
+            placeholder="Add new project"
+            required
+          />
+          <button type="submit">Add Project</button>
         </form>
+        <div class="projects">Projects</div>
         <div class="project-list"></div>
       </aside>
       <main class="todo-list">
