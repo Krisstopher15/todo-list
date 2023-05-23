@@ -31,6 +31,7 @@ function renderTodos(todoList, index) {
 
   todoList.forEach((todo) => {
     const todoElement = document.createElement("div");
+    todoElement.classList.add("todoElement");
     todoElement.innerHTML = `
         <p>${todo.title}</p>
         <p>${todo.description}</p>

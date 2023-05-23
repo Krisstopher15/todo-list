@@ -1,3 +1,5 @@
+import { emptyList } from "./emptyList";
+
 let projectList = [];
 let projectId = 0;
 
@@ -19,7 +21,6 @@ function addProject() {
   const project = new Project(projectId, projectName);
   projectList.push(project);
   projectId++;
-
   console.table(projectList);
 }
 

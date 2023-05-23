@@ -12,7 +12,7 @@ function renderProjects() {
 
     list.innerHTML = `
         <p data-id="${index}" class="btn-currentProject">${project.name}</p>
-        <button data-id="${index}" class="btn-removeProject">X</button>
+        <button data-id="${index}" class="btn-removeProject">Remove</button>
     `;
     const btnRemoveProject = list.querySelector(".btn-removeProject");
     // btnRemoveProject.addEventListener("click", (e) => {

@@ -1,7 +1,9 @@
 import "./style.css";
 import { renderProjects } from "./renderProjects";
 import { addProject, projectList } from "./addProject";
+import { emptyList } from "./emptyList";
 
+emptyList();
 renderProjects();
 
 const btnAddProject = document.querySelector(".add-project");
