@@ -34,7 +34,7 @@ body {
   grid-template-columns: 0.4fr 0.9fr;
   grid-template-rows: 0.2fr 2fr;
   height: 100%;
-  background-color: var(--content-bgcolor);
+  background-color: var(--white);
 }
 
 .main-header {
@@ -112,11 +112,11 @@ body {
   color: #fff;
 }
 
-.projects {
+.title---projects {
   font-size: 1.5rem;
 }
 
-.project-list {
+.projects {
   height: 250px;
   width: 100%;
   overflow: auto;
@@ -129,7 +129,7 @@ body {
   padding: 1rem;
 }
 
-.project {
+.project-element {
   display: flex;
   width: 100%;
   background-color: #fff;
@@ -139,11 +139,11 @@ body {
   border-radius: 1rem;
 }
 
-.project > p {
+.project-element > p {
   font-size: 1.4rem;
 }
 
-.btn-removeProject {
+.btn-remove-project {
   border: 1px solid var(--btnremove-redcolor);
   color: var(--btnremove-redcolor);
   padding: 0.3rem;
@@ -151,15 +151,15 @@ body {
   transition: background-color 100ms ease-out, color 100ms ease-out;
 }
 
-.btn-removeProject:hover {
+.btn-remove-project:hover {
   background-color: var(--btnremove-redcolor);
   color: #fff;
 }
 
-.todo-list {
+/* .todo-list {
   position: relative;
   background-color: var(--white);
-}
+} */
 
 .project-info {
   display: flex;
@@ -179,7 +179,7 @@ body {
   color: var(--blue-dark);
 }
 
-.add-task-btn {
+.add-todo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,7 +278,7 @@ body {
   top: 0.2rem;
 }
 
-.todos {
+.todo-list {
   display: flex;
   flex-direction: column;
   height: 90%;
@@ -308,6 +308,27 @@ body {
   gap: 1rem;
 }
 
-.close-form {
+.btn-edit {
+  padding: 0.3rem;
+  border: 1px solid var(--todolist-bgcolor);
+  border-radius: 0.5rem;
+}
+
+.btn-remove-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btnremove-redcolor);
+  color: var(--white);
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  transform: rotate(45deg);
+  border: none;
+  outline: none;
+}
+
+.visibility {
   display: none;
 }
