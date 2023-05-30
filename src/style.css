@@ -285,7 +285,8 @@ body {
   padding: 2rem;
   align-items: center;
   gap: 1rem;
-  overflow: auto;
+  overflow: scroll;
+  flex-grow: 0;
 }
 
 .todo-element {
@@ -331,4 +332,22 @@ body {
 
 .visibility {
   display: none;
+}
+
+.priority-circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.priority-low {
+  background-color: #affc41;
+}
+
+.priority-medium {
+  background-color: #ffc300;
+}
+
+.priority-high {
+  background-color: #ef233c;
 }

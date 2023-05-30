@@ -40,4 +40,4 @@ function todoForm(projectId) {
   );
 }
 
-export { addTodoToProject, removeTodo, todoForm };
+export { addTodoToProject, removeTodo, todoForm, Todo };
