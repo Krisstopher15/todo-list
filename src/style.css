@@ -351,3 +351,27 @@ body {
 .priority-high {
   background-color: #ef233c;
 }
+
+.main-container {
+  position: relative;
+}
+
+.edit-form {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--btnremove-redcolor);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.edit-form label {
+  color: var(--white);
+  font-size: 1rem;
+}

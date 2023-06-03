@@ -2,6 +2,7 @@ import { createProject, removeProject } from "./addProject";
 import { removeTodo, todoForm } from "./addTodo";
 import { renderTodos } from "./renderTodos";
 import { renderProjects, renderProjectTodos } from "./renderProjects";
+import { editTodo } from "./editTodo";
 
 function clickEvents() {
   const addProjectForm = document.querySelector(".add-project");
@@ -60,12 +61,12 @@ function clickEvents() {
       const todoIndex = parseInt(event.target.dataset.todoIndex);
       removeTodo(projectId, todoIndex);
       renderTodos(projectId);
+    } else if (event.target.matches(".btn-edit")) {
+      const todoIndex = parseInt(event.target.getAttribute("data-todo-index"));
+      const projectId = parseInt(event.target.getAttribute("data-project-id"));
+
+      editTodo(todoIndex, projectId);
     }
-    // else if (event.target.matches(".btn-edit")) {
-    //   const projectIndex = parseInt(event.target.getAttribute("data-project-id"));
-    //   const todoIndex = parseInt(event.target.getAttribute("data-todo-index"));
-    //   editTodo(projectIndex, todoIndex);
-    // }
   });
 }
 
