@@ -11,6 +11,7 @@ function clickEvents() {
   const todoListContainer = document.querySelector(".todo-list");
   const mainContainer = document.querySelector(".main-container");
   const form = document.querySelector(".addTaskForm");
+  const btnClose = form.querySelector(".btn-close");
 
   addProjectForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -53,6 +54,11 @@ function clickEvents() {
     form.classList.add("visibility");
     renderTodos(projectId);
     form.reset();
+  });
+
+  btnClose.addEventListener("click", (e) => {
+    e.preventDefault();
+    form.classList.add("visibility");
   });
 
   todoListContainer.addEventListener("click", (event) => {
